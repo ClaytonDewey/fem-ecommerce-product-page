@@ -1,5 +1,90 @@
 @use '../util' as *;
 
 .navbar {
-  //
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: rem(32);
+  }
+
+  &-primary,
+  &-secondary {
+    color: var(--clr-gray-500);
+    font: var(--text-preset-4);
+  }
+
+  a {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: rem(-32);
+      width: 0;
+      border-bottom: rem(4) solid var(--clr-orange-500);
+      transition: var(--transition);
+    }
+
+    &::before {
+      right: 50%;
+    }
+
+    &::after {
+      left: 50%;
+    }
+
+    &:hover::before {
+      width: 50%;
+    }
+
+    &:hover::after {
+      width: 50%;
+    }
+
+    &.active {
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: rem(-32);
+        width: 0;
+        border-bottom: rem(4) solid var(--clr-orange-500);
+        transition: var(--transition);
+      }
+      &::before {
+        right: 50%;
+        width: 50%;
+      }
+
+      &::after {
+        left: 50%;
+        width: 50%;
+      }
+    }
+  }
+
+  &-secondary {
+    svg {
+      fill: currentColor;
+      height: rem(21.82);
+      width: rem(20);
+    }
+  }
+}
+
+.avatar {
+  height: rem(50);
+  width: rem(50);
+  border-radius: 50%;
 }
