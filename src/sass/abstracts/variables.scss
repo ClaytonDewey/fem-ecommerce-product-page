@@ -16,4 +16,21 @@
 
   // Typography
   --ff-primary: 'Kumbh Sans', sans-serif;
+
+  // Text Presets
+  --text-preset-1: normal normal 700 #{rem(44)} / #{rem(48)} var(--ff-primary);
+  --text-preset-2: normal normal 700 #{rem(28)} / #{rem(32)} var(--ff-primary);
+  --text-preset-3: normal normal 700 #{rem(16)} / #{rem(26)} var(--ff-primary);
+  --text-preset-3-regular: normal normal 400 #{rem(16)} / #{rem(26)}
+    var(--ff-primary);
+  --text-preset-4: normal normal 400 #{rem(15)} / #{rem(26)} var(--ff-primary);
+  --text-preset-5: normal normal 700 #{rem(13)} / #{rem(16)} var(--ff-primary);
+  --text-preset-6: normal normal 700 #{rem(12)} / #{rem(15)} var(--ff-primary);
+
+  // Transitions
+  --transition: all 0.3s ease-in-out;
+
+  @media (prefers-reduced-motion: reduce) {
+    --transition: none;
+  }
 }
