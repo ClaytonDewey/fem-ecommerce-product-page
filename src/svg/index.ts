@@ -1,6 +1,7 @@
 export { default as IconCart } from './Cart';
 export { default as IconClose } from './Close';
 export { default as IconDelete } from './Delete';
+export { default as Icon } from './icon';
 export { default as IconLogo } from './Logo';
 export { default as IconMenu } from './Menu';
 export { default as IconMinus } from './Minus';
