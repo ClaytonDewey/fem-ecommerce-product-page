@@ -1,0 +1,9 @@
+export { default as IconCart } from './Cart';
+export { default as IconClose } from './Close';
+export { default as IconDelete } from './Delete';
+export { default as IconLogo } from './Logo';
+export { default as IconMenu } from './Menu';
+export { default as IconMinus } from './Minus';
+export { default as IconNext } from './Next';
+export { default as IconPlus } from './Plus';
+export { default as IconPrevious } from './Previous';

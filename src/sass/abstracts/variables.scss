@@ -1,0 +1,19 @@
+@use '../util' as *;
+
+:root {
+  // Neutral Palette
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-gray-950: #1d2026;
+  --clr-gray-500: #69707d;
+  --clr-gray-300: #c3cad9;
+  --clr-gray-100: #e4e9f2;
+  --clr-gray-50: #f6f8fd;
+
+  // Primary Palette
+  --clr-orange-500: #ff7e1b;
+  --clr-orange-300: #ffab6a;
+
+  // Typography
+  --ff-primary: 'Kumbh Sans', sans-serif;
+}
