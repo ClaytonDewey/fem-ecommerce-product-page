@@ -12,7 +12,7 @@ const IconDelete = () => {
           id='a'
         />
       </defs>
-      <use fill='#C3CAD9' fillRule='nonzero' xlinkHref='#a' />
+      <use fill='currentColor' fillRule='nonzero' xlinkHref='#a' />
     </svg>
   );
 };

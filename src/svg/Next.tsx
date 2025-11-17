@@ -7,7 +7,7 @@ const IconNext = () => {
       viewBox='0 0 13 18'>
       <path
         d='m2 1 8 8-8 8'
-        stroke='#1D2026'
+        stroke='currentColor'
         stroke-width='3'
         fill='none'
         fillRule='evenodd'

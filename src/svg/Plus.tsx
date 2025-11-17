@@ -12,7 +12,7 @@ const IconPlus = () => {
           id='b'
         />
       </defs>
-      <use fill='#FF7E1B' fillRule='nonzero' xlinkHref='#b' />
+      <use fill='currentColor' fillRule='nonzero' xlinkHref='#b' />
     </svg>
   );
 };

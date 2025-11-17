@@ -12,7 +12,7 @@ const IconMinus = () => {
           id='a'
         />
       </defs>
-      <use fill='#FF7E1B' fillRule='nonzero' xlinkHref='#a' />
+      <use fill='currentColor' fillRule='nonzero' xlinkHref='#a' />
     </svg>
   );
 };
