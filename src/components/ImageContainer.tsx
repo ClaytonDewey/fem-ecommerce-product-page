@@ -44,7 +44,7 @@ const ImageContainer = () => {
         />
       </div>
       <ThumbnailsContainer />
-      <Lightbox />
+      {/* <Lightbox /> */}
     </section>
   );
 };
