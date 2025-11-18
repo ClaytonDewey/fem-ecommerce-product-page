@@ -15,7 +15,7 @@ const Lightbox = () => {
           </Button>
           <div className='lightbox__viewport'>
             <div className='lightbox__slide'>
-              <img src='./images/image-product-1' alt='Product 1' />
+              <img src='./images/image-product-1.jpg' alt='Product 1' />
             </div>
           </div>
           <Button type='button' className='btn btn-next'>
