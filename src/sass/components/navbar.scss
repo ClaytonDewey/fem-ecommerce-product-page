@@ -94,17 +94,34 @@
       display: flex;
     }
   }
-
-  &-secondary {
-    svg {
-      fill: currentColor;
-      height: rem(21.82);
-      width: rem(20);
-    }
-  }
 }
 
 .cart {
+  color: var(--clr-gray-500);
+
+  svg {
+    fill: var(--clr-gray-500);
+    height: rem(21.82);
+    width: rem(20);
+    transition: var(--transition);
+
+    path {
+      fill: inherit;
+    }
+  }
+
+  &:hover {
+    svg {
+      fill: var(--clr-gray-950);
+      height: rem(21.82);
+      width: rem(20);
+
+      path {
+        fill: inherit;
+      }
+    }
+  }
+
   .btn.btn-open {
     height: rem(21.82);
     width: rem(20);
