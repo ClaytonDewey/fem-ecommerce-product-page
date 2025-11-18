@@ -1,0 +1,237 @@
+@use '../util' as *;
+
+.product {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(tablet) {
+      margin-block-start: rem(48);
+    }
+
+    @include breakpoint(desktop) {
+      flex-direction: row;
+      align-items: center;
+      padding-inline: rem(44.5);
+      max-width: var(--page-width);
+      margin-inline: auto;
+      gap: rem(128);
+    }
+  }
+
+  &__detail-images {
+    @include breakpoint(desktop) {
+      display: flex;
+      flex-direction: column;
+      gap: rem(32);
+    }
+  }
+
+  &__image {
+    &-main {
+      position: relative;
+      overflow: hidden;
+      height: rem(300);
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      @include breakpoint(tablet) {
+        height: rem(290);
+        border-radius: rem(15);
+
+        img {
+          top: initial;
+          bottom: rem(-107);
+          transform: translateX(-50%);
+        }
+      }
+
+      @include breakpoint(desktop) {
+        height: rem(445);
+        width: rem(448);
+        border-radius: rem(15);
+
+        img {
+          position: initial;
+          transform: translate(0);
+        }
+      }
+    }
+
+    &-thumbnails {
+      display: none;
+
+      @include breakpoint(desktop) {
+        display: flex;
+        align-items: center;
+        gap: rem(32);
+        width: rem(448);
+
+        .thumbnail {
+          cursor: pointer;
+          border-radius: rem(10);
+          overflow: hidden;
+          flex-shrink: 0;
+          height: rem(88);
+          width: rem(88);
+
+          img {
+            transition: var(--transition);
+            height: rem(88);
+            width: rem(88);
+          }
+
+          &.active {
+            border: rem(2) solid var(--clr-orange-500);
+            img {
+              opacity: 0.25;
+            }
+          }
+
+          &:hover {
+            img {
+              opacity: 0.25;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__info {
+    padding: rem(24);
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+
+    &-description {
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+
+      h2 {
+        font: var(--text-preset-6);
+        letter-spacing: rem(1.85);
+        color: var(--clr-gray-500);
+        text-transform: uppercase;
+      }
+
+      h3 {
+        text-transform: capitalize;
+        font: var(--text-preset-2);
+        color: var(--clr-gray-950);
+      }
+
+      p {
+        font: var(--text-preset-4);
+        color: var(--clr-gray-500);
+      }
+    }
+
+    &-price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font: var(--text-preset-3);
+      height: rem(32);
+
+      .price {
+        display: flex;
+        align-items: center;
+        gap: rem(16);
+        font: var(--text-preset-2);
+        color: var(--text-preset-2);
+
+        .discount {
+          align-self: flex-start;
+          font: var(--text-preset-3);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: rem(51);
+          height: rem(27);
+          border-radius: rem(6);
+          background-color: var(--clr-black);
+          color: var(--clr-white);
+        }
+      }
+
+      .price-sale {
+        text-decoration: line-through;
+        color: var(--clr-gray-500);
+      }
+    }
+
+    &-actions {
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+    }
+  }
+  @include breakpoint(tablet) {
+    &__info {
+      padding-block-start: rem(48);
+      padding-inline: 0;
+      gap: rem(24);
+
+      &-description {
+        gap: rem(24);
+
+        h2 {
+          font: var(--text-preset-5);
+          letter-spacing: rem(2);
+        }
+
+        h3 {
+          font: var(--text-preset-1);
+        }
+
+        p {
+          font: var(--text-preset-3-regular);
+        }
+      }
+
+      &-price {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: rem(8);
+        height: auto;
+
+        .price {
+          gap: rem(24);
+        }
+      }
+
+      &-actions {
+        flex-flow: row nowrap;
+        gap: rem(8);
+        .btn.btn-primary,
+        input {
+          width: rem(300);
+        }
+      }
+    }
+  }
+
+  @include breakpoint(desktop) {
+    &__info {
+      padding: 0;
+      &-actions {
+        input {
+          width: rem(157);
+        }
+        .btn.btn-primary {
+          width: rem(272);
+        }
+      }
+    }
+  }
+}
