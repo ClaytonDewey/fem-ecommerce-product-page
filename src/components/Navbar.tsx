@@ -1,6 +1,5 @@
 import { Icon } from '../svg';
-import Button from './Button';
-import Dropdown from './Dropdown';
+import { Button, Dropdown } from '.';
 
 type NavbarProps = {
   isOpen?: boolean;
@@ -54,6 +53,11 @@ const Navbar = ({ isOpen, toggleClose }: NavbarProps) => {
                   <div className='cart__body'>
                     <p className='cart__empty'>Your cart is empty.</p>
                   </div>
+                  {/* <div className='cart__footer'>
+                    <Button type='button' className='btn btn-primary'>
+                      Checkout
+                    </Button>
+                  </div> */}
                 </div>
               </>
             }
