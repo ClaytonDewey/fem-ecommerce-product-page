@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 // 768px, 1024px
 $breakpoints: (
   'tablet': '48em',
@@ -5,7 +7,7 @@ $breakpoints: (
 );
 
 @mixin breakpoint($size) {
-  @media (min-width: map-get($breakpoints, $size)) {
+  @media (min-width: map.get($breakpoints, $size)) {
     @content;
   }
 }
