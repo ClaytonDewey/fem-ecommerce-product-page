@@ -15,7 +15,7 @@ const DropdownButton = forwardRef<HTMLButtonElement, DropdownButtonProps>(
       <Button
         onClick={toggle}
         type='button'
-        className={`btn ${open ? 'btn-open' : null}`}
+        className={`btn btn-open ${open ? 'open' : null}`}
         ref={ref}>
         {children}
       </Button>
