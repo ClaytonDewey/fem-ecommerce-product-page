@@ -17,11 +17,10 @@
     touch-action: none;
     overscroll-behavior: contain;
 
-    @support (height: 100dvh) {
+    @supports (height: 100dvh) {
       height: 100dvh;
     }
   }
-
   &__container {
     position: absolute;
     inset: 0;
