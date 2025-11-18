@@ -15,11 +15,13 @@
   }
 
   @include breakpoint(tablet) {
-    //
-  }
-  @include breakpoint(desktop) {
-    gap: rem(56);
     height: rem(82);
     padding-block-end: rem(32);
+    padding-inline: 0;
+    border-bottom: rem(1) solid var(--clr-gray-100);
+  }
+
+  @include breakpoint(desktop) {
+    gap: rem(56);
   }
 }

@@ -1,11 +1,14 @@
-import { Header, Footer } from './components';
+import { Header, Footer, ProductContainer } from './components';
 
 const App = () => {
   return (
-    <div>
+    <>
       <Header />
+      <main>
+        <ProductContainer />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 };
 export default App;

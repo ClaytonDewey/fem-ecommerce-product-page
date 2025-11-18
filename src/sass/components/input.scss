@@ -1,0 +1,17 @@
+@use '../util' as *;
+
+.product {
+  &__info-qty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font: var(--text-preset-3);
+    color: var(--clr-gray-950);
+    background-color: var(--clr-gray-50);
+    border: none;
+    border-radius: rem(10);
+    width: 100%;
+    height: rem(56);
+  }
+}

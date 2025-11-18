@@ -41,7 +41,7 @@ const Navbar = ({ isOpen, toggleClose }: NavbarProps) => {
             buttonText={
               <>
                 <Icon name='cart' />
-                <span className='cart-count'>3</span>
+                {/* <span className='cart-count'>3</span> */}
               </>
             }
             content={

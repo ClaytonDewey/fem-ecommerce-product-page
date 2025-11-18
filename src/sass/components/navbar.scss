@@ -101,8 +101,8 @@
 
   svg {
     fill: var(--clr-gray-500);
-    height: rem(21.82);
-    width: rem(20);
+    height: rem(20);
+    width: rem(21.82);
     transition: var(--transition);
 
     path {
@@ -113,8 +113,8 @@
   &:hover {
     svg {
       fill: var(--clr-gray-950);
-      height: rem(21.82);
-      width: rem(20);
+      height: rem(20);
+      width: rem(21.82);
 
       path {
         fill: inherit;
@@ -123,8 +123,8 @@
   }
 
   .btn.btn-open {
-    height: rem(21.82);
-    width: rem(20);
+    height: rem(20);
+    width: rem(21.82);
     position: relative;
 
     .cart-count {
