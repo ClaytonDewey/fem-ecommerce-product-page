@@ -105,10 +105,9 @@
 }
 
 .cart {
-  height: rem(21.82);
-  width: rem(20);
-
-  a {
+  button {
+    height: rem(21.82);
+    width: rem(20);
     position: relative;
 
     .cart-count {

@@ -1,5 +1,6 @@
 import { Icon } from '../svg';
 import Button from './Button';
+import Dropdown from './Dropdown';
 
 type NavbarProps = {
   isOpen?: boolean;
@@ -35,14 +36,30 @@ const Navbar = ({ isOpen, toggleClose }: NavbarProps) => {
           <a href='/'>Contact</a>
         </li>
       </ul>
-      <ul className='navbar-secondary'>
-        <li className='cart'>
-          <a href='/'>
-            <Icon name='cart' />
-            <span className='cart-count'>3</span>
-          </a>
-        </li>
-        <li>
+      <div className='navbar-secondary'>
+        <div className='cart'>
+          <Dropdown
+            buttonText={
+              <>
+                <Icon name='cart' />
+                <span className='cart-count'>3</span>
+              </>
+            }
+            content={
+              <>
+                <div className='dropdown__cart'>
+                  <div className='cart__header'>
+                    <h2>Cart</h2>
+                  </div>
+                  <div className='cart__body'>
+                    <p className='cart__empty'>Your cart is empty.</p>
+                  </div>
+                </div>
+              </>
+            }
+          />
+        </div>
+        <div>
           <a href='/'>
             <img
               src='./images/image-avatar.png'
@@ -51,8 +68,8 @@ const Navbar = ({ isOpen, toggleClose }: NavbarProps) => {
             />
             <div className='sr-only'>User Name</div>
           </a>
-        </li>
-      </ul>
+        </div>
+      </div>
     </nav>
   );
 };

@@ -1,0 +1,50 @@
+@use '../util' as *;
+
+.dropdown {
+  position: relative;
+
+  &__content {
+    z-index: 9999;
+    right: rem(-64);
+    top: rem(44);
+    padding: rem(24) rem(12);
+    background-color: var(--clr-white);
+    border-radius: rem(10);
+    box-shadow: 0 rem(20) rem(50) rem(-21) rgba(0, 0, 0, 0.1);
+    width: rem(360);
+    height: rem(265);
+    border: 1px solid lightgray;
+    position: absolute;
+    min-width: 100%;
+    cursor: pointer;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__content {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    --ms-overfly-style: none;
+    opacity: 0;
+    transform: translateY(-5%);
+    @media (prefers-reduced-motion: no-preference) {
+      transition: transform 150ms var(--transition-type),
+        opacity 100ms var(--transition-type);
+    }
+    pointer-events: none;
+
+    &.content-open {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    @include breakpoint(tablet) {
+      top: rem(53);
+      right: -50%;
+    }
+  }
+}
