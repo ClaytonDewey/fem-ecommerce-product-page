@@ -1,0 +1,27 @@
+@use '../util' as *;
+
+.cart {
+  font: var(--text-preset-3);
+  &__header,
+  &__body,
+  &__footer {
+    padding-inline: rem(12);
+  }
+
+  &__header {
+    h2 {
+      color: var(--clr-gray-950);
+      font: inherit;
+      padding-block-end: rem(23);
+      border-bottom: rem(1) solid var(--clr-gray-100);
+    }
+  }
+
+  &__body {
+    height: rem(99);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: var(--clr-gray-500);
+  }
+}
