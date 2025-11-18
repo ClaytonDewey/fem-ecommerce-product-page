@@ -51,4 +51,12 @@
       display: none;
     }
   }
+
+  &-prev,
+  &-next {
+    background-color: var(--clr-white);
+    height: rem(56);
+    width: rem(56);
+    border-radius: 50%;
+  }
 }
