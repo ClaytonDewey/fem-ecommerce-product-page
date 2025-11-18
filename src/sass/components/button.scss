@@ -29,4 +29,25 @@
       background-color: var(--clr-orange-300);
     }
   }
+
+  &-toggle {
+    margin-inline-end: rem(16);
+    color: var(--clr-gray-500);
+
+    @include breakpoint(desktop) {
+      display: none;
+    }
+  }
+
+  &-close {
+    color: var(--clr-gray-500);
+
+    svg {
+      height: rem(13.44);
+      width: rem(13.44);
+    }
+    @include breakpoint(desktop) {
+      display: none;
+    }
+  }
 }

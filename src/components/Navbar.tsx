@@ -1,9 +1,24 @@
 import { Icon } from '../svg';
+import Button from './Button';
 
-const Navbar = () => {
+type NavbarProps = {
+  isOpen?: boolean;
+  toggleClose?: () => void;
+};
+
+const Navbar = ({ isOpen, toggleClose }: NavbarProps) => {
   return (
     <nav className='navbar'>
-      <ul className='navbar-primary'>
+      <ul className={`navbar-primary ${isOpen ? 'open' : ''}`}>
+        <li>
+          <Button
+            type='button'
+            className='btn btn-close'
+            aria-label='Close Menu'
+            onClick={toggleClose}>
+            <Icon name='close' />
+          </Button>
+        </li>
         <li>
           <a href='/'>Collections</a>
         </li>
@@ -21,9 +36,10 @@ const Navbar = () => {
         </li>
       </ul>
       <ul className='navbar-secondary'>
-        <li>
+        <li className='cart'>
           <a href='/'>
             <Icon name='cart' />
+            <span className='cart-count'>3</span>
           </a>
         </li>
         <li>

@@ -13,21 +13,21 @@ html {
   font-weight: normal;
 }
 
-body {
-  position: relative;
-  padding-block: rem(19);
-
-  @include breakpoint(tablet) {
-    padding-block: rem(28);
-  }
-}
-
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: var(--ff-primary);
+}
+
+body {
+  position: relative;
+  padding: rem(21) rem(24);
+
+  @include breakpoint(tablet) {
+    padding: rem(28) rem(80);
+  }
 }
 
 .sr-only {

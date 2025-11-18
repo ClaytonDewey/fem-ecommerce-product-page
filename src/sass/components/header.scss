@@ -3,10 +3,7 @@
 .header {
   display: flex;
   align-items: center;
-  gap: rem(56);
-  max-width: rem(1110);
-  height: rem(82);
-  padding-block-end: rem(32);
+  max-width: var(--page-width);
   margin-inline: auto;
 
   &__logo {
@@ -14,5 +11,14 @@
       width: rem(137.5);
       height: rem(20);
     }
+  }
+
+  @include breakpoint(tablet) {
+    //
+  }
+  @include breakpoint(desktop) {
+    gap: rem(56);
+    height: rem(82);
+    padding-block-end: rem(32);
   }
 }

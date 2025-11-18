@@ -1,6 +1,10 @@
 @use '../util' as *;
 
 .footer {
+  max-width: var(--page-width);
+  margin-inline: auto;
+  text-align: center;
+
   .attribution {
     //
   }
