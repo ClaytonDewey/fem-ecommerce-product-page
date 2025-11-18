@@ -4,8 +4,41 @@
   max-width: var(--page-width);
   margin-inline: auto;
   text-align: center;
+  padding-block: rem(32);
 
   .attribution {
-    //
+    font: var(--text-preset-4);
+
+    a {
+      position: relative;
+      text-decoration: none;
+      color: var(--clr-gray-500);
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: #{rem(-4)};
+        width: 0;
+        height: #{rem(2)};
+        background-color: var(--clr-orange-500);
+        transition: var(--transition);
+      }
+
+      &::before {
+        right: 50%;
+      }
+
+      &::after {
+        left: 50%;
+      }
+
+      &:hover {
+        &::before,
+        &::after {
+          width: 50%;
+        }
+      }
+    }
   }
 }
