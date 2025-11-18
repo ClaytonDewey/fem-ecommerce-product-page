@@ -12,6 +12,7 @@
     @include breakpoint(desktop) {
       flex-direction: row;
       align-items: center;
+      margin-block-start: rem(96);
       padding-inline: rem(44.5);
       max-width: var(--page-width);
       margin-inline: auto;
@@ -41,6 +42,12 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        opacity: 1;
+        transition: opacity 300ms ease-in-out;
+
+        &.fading {
+          opacity: 0;
+        }
       }
 
       @include breakpoint(tablet) {
