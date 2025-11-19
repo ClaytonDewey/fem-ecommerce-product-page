@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Lightbox, Thumbnail } from '.';
+import { Button, Lightbox, Thumbnail } from '.';
+import { Icon } from '../svg';
 
 const images = Array.from({ length: 4 }, (_, i) => ({
   id: i + 1,
@@ -17,6 +18,18 @@ const ImageContainer = () => {
     const timer = setTimeout(() => setIsFading(false), 300);
     return () => clearTimeout(timer);
   }, [selectedIndex]);
+
+  const handlePrevious = () => {
+    setSelectedIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setSelectedIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   const ThumbnailsContainer = () => {
     return (
@@ -37,11 +50,17 @@ const ImageContainer = () => {
   return (
     <section className='product__detail-images'>
       <div className='product__image-main'>
+        <Button type='button' className='btn btn-prev' onClick={handlePrevious}>
+          <Icon name='previous' />
+        </Button>
         <img
           src={images[selectedIndex].fullsize}
           alt='Product'
           className={isFading ? 'fading' : ''}
         />
+        <Button type='button' className='btn btn-next' onClick={handleNext}>
+          <Icon name='next' />
+        </Button>
       </div>
       <ThumbnailsContainer />
       {/* <Lightbox /> */}

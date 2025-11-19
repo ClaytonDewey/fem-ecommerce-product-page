@@ -34,6 +34,21 @@
       overflow: hidden;
       height: rem(300);
 
+      .btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 200;
+      }
+
+      .btn-prev {
+        left: rem(16);
+      }
+
+      .btn-next {
+        right: rem(16);
+      }
+
       img {
         display: block;
         max-width: 100%;
@@ -65,6 +80,10 @@
         height: rem(445);
         width: rem(448);
         border-radius: rem(15);
+
+        .btn {
+          display: none;
+        }
 
         img {
           position: initial;

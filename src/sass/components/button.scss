@@ -53,9 +53,14 @@
   &-prev,
   &-next {
     background-color: var(--clr-white);
-    height: rem(56);
-    width: rem(56);
+    height: rem(40);
+    width: rem(40);
     border-radius: 50%;
+
+    @include breakpoint(desktop) {
+      height: rem(56);
+      width: rem(56);
+    }
   }
 
   &-increase,
