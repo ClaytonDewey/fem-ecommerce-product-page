@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button, Input } from '.';
 import { Icon } from '../svg';
 import { useCartStore } from '../store/useCartStore';
@@ -15,29 +15,23 @@ const NumericInputWithButtons = ({
   const [value, setValue] = useState(1);
   const { setQuantity } = useCartStore();
 
+  // Handle side effects when value changes
+  useEffect(() => {
+    setQuantity(itemId, value);
+    onQuantityChange?.(value);
+  }, [value, itemId, setQuantity, onQuantityChange]);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = Number(e.target.value);
     setValue(newValue);
-    setQuantity(itemId, newValue);
-    onQuantityChange?.(newValue);
   };
 
   const handleIncrease = () => {
-    setValue((prevValue) => {
-      const newValue = prevValue + 1;
-      setQuantity(itemId, newValue);
-      onQuantityChange?.(newValue);
-      return newValue;
-    });
+    setValue((prevValue) => prevValue + 1);
   };
 
   const handleDecrease = () => {
-    setValue((prevValue) => {
-      const newValue = Math.max(1, prevValue - 1);
-      setQuantity(itemId, newValue);
-      onQuantityChange?.(newValue);
-      return newValue;
-    });
+    setValue((prevValue) => Math.max(1, prevValue - 1));
   };
 
   return (
