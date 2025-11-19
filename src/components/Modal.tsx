@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Button } from '.';
 import { Icon } from '../svg';
 
@@ -8,6 +7,7 @@ type ModalProps = {
 };
 
 const Modal = ({ onClose }: ModalProps) => {
+  // https://www.youtube.com/watch?v=jizR55PCbvI
   return (
     <motion.div
       className='modal__overlay'
@@ -20,7 +20,8 @@ const Modal = ({ onClose }: ModalProps) => {
         onClick={(e) => e.stopPropagation()}
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}>
+        exit={{ scale: 0.9, opacity: 0 }}
+        transition={{ type: 'spring', stiffness: 400, damping: 25 }}>
         <div className='lightbox__container'>
           <div className='lightbox__carousel'>
             <Button
@@ -47,22 +48,4 @@ const Modal = ({ onClose }: ModalProps) => {
   );
 };
 
-const ModalWrapper = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className='modal__wrapper'>
-      <Button
-        type='button'
-        className='btn btn-open-modal'
-        onClick={() => setIsOpen(true)}>
-        Open Modal
-      </Button>
-      <AnimatePresence>
-        {isOpen && <Modal onClose={() => setIsOpen(false)} />}
-      </AnimatePresence>
-    </div>
-  );
-};
-
-export default ModalWrapper;
+export default Modal;

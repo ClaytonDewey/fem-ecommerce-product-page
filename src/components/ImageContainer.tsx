@@ -1,5 +1,6 @@
+import { AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Button, ModalWrapper, Thumbnail } from '.';
+import { Button, Thumbnail, Modal } from '.';
 import { Icon } from '../svg';
 
 const images = Array.from({ length: 4 }, (_, i) => ({
@@ -12,6 +13,7 @@ const images = Array.from({ length: 4 }, (_, i) => ({
 const ImageContainer = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     setIsFading(true);
@@ -57,13 +59,16 @@ const ImageContainer = () => {
           src={images[selectedIndex].fullsize}
           alt='Product'
           className={isFading ? 'fading' : ''}
+          onClick={() => setIsOpen(true)}
         />
         <Button type='button' className='btn btn-next' onClick={handleNext}>
           <Icon name='next' />
         </Button>
       </div>
       <ThumbnailsContainer />
-      <ModalWrapper />
+      <AnimatePresence>
+        {isOpen && <Modal onClose={() => setIsOpen(false)} />}
+      </AnimatePresence>
     </section>
   );
 };
