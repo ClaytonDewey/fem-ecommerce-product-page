@@ -10,7 +10,7 @@ const Navbar = ({ isOpen, toggleClose }: NavbarProps) => {
   return (
     <nav className='navbar'>
       <ul className={`navbar-primary ${isOpen ? 'open' : ''}`}>
-        <li>
+        <li className='navbar-toggle'>
           <Button
             type='button'
             className='btn btn-close'

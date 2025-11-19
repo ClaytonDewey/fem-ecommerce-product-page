@@ -8,6 +8,10 @@
 
   @include breakpoint(desktop) {
     justify-content: space-between;
+
+    &-toggle {
+      display: none;
+    }
   }
 
   a {
@@ -30,6 +34,10 @@
       gap: rem(48);
     }
 
+    @include breakpoint(desktop) {
+      gap: rem(32);
+    }
+
     color: var(--clr-gray-500);
     font: var(--text-preset-4);
     transition: var(--transition);
@@ -46,7 +54,7 @@
       &::after {
         content: '';
         position: absolute;
-        bottom: rem(-32);
+        bottom: rem(-48);
         width: 0;
         border-bottom: rem(4) solid var(--clr-orange-500);
         transition: var(--transition);
@@ -73,7 +81,7 @@
         &::after {
           content: '';
           position: absolute;
-          bottom: rem(-32);
+          bottom: rem(-48);
           width: 0;
           border-bottom: rem(4) solid var(--clr-orange-500);
           transition: var(--transition);

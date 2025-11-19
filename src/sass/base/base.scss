@@ -23,7 +23,6 @@ body {
 
 body {
   position: relative;
-  padding-block: rem(21);
 
   @include breakpoint(tablet) {
     padding: rem(28) rem(80);
