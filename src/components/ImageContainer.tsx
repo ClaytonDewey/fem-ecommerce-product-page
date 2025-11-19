@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Button, Lightbox, Thumbnail } from '.';
+import { Button, ModalWrapper, Thumbnail } from '.';
 import { Icon } from '../svg';
 
 const images = Array.from({ length: 4 }, (_, i) => ({
@@ -63,7 +63,7 @@ const ImageContainer = () => {
         </Button>
       </div>
       <ThumbnailsContainer />
-      {/* <Lightbox /> */}
+      <ModalWrapper />
     </section>
   );
 };

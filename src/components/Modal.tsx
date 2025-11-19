@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button, ImageContainer } from '.';
+import { Button } from '.';
 import { Icon } from '../svg';
 
 type ModalProps = {
@@ -21,13 +21,27 @@ const Modal = ({ onClose }: ModalProps) => {
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.9, opacity: 0 }}>
-        <Button
-          type='button'
-          className='btn btn-close-lightbox'
-          onClick={onClose}>
-          <Icon name='close' />
-        </Button>
-        <ImageContainer />
+        <div className='lightbox__container'>
+          <div className='lightbox__carousel'>
+            <Button
+              type='button'
+              className='btn btn-close-lightbox'
+              onClick={onClose}>
+              <Icon name='close' />
+            </Button>
+            <Button type='button' className='btn btn-prev'>
+              <Icon name='previous' />
+            </Button>
+            <div className='lightbox__viewport'>
+              <div className='lightbox__slide'>
+                <img src='./images/image-product-1.jpg' alt='Product 1' />
+              </div>
+            </div>
+            <Button type='button' className='btn btn-next'>
+              <Icon name='next' />
+            </Button>
+          </div>
+        </div>
       </motion.div>
     </motion.div>
   );
