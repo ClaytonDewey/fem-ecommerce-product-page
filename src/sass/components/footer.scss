@@ -4,7 +4,8 @@
   max-width: var(--page-width);
   margin-inline: auto;
   text-align: center;
-  padding-block: rem(32);
+  padding-block-start: rem(64);
+  padding-block-end: rem(32);
 
   .attribution {
     font: var(--text-preset-4);
