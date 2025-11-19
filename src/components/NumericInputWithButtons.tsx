@@ -4,7 +4,7 @@ import { Icon } from '../svg';
 import { useCartStore } from '../store/useCartStore';
 
 interface NumericInputWithButtonsProps {
-  itemId: string;
+  itemId: number;
   onQuantityChange?: (quantity: number) => void;
 }
 

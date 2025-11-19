@@ -3,33 +3,42 @@ import { Button, NumericInputWithButtons } from '.';
 import { Icon } from '../svg';
 import { useCartStore } from '../store/useCartStore';
 
+import data from '../data.json';
+
 const DescriptionContainer = () => {
   const [quantity, setQuantity] = useState(1);
   const { addItem } = useCartStore();
 
+  const {
+    productId,
+    brand,
+    productName,
+    description,
+    price,
+    discount,
+    salePrice,
+  } = data;
+
   return (
     <section className='product__info'>
       <div className='product__info-description'>
-        <h2>sneaker company</h2>
-        <h3>fall limited edition sneakers</h3>
-        <p>
-          These low-profile sneakers are your perfect casual wear companion.
-          Featuring a durable rubber outer sole, they&rsquo;ll withstand
-          everything the weather can offer.
-        </p>
+        <h2>{brand}</h2>
+        <h3>{productName}</h3>
+        <p>{description}</p>
       </div>
       <div className='product__info-price'>
         <p className='price'>
-          $125.00 <span className='discount'>50%</span>
+          ${salePrice.toFixed(2)}{' '}
+          <span className='discount'>{(discount * 100).toFixed(0)}%</span>
         </p>
-        <p className='price-sale'>$250.00</p>
+        <p className='price-sale'>${price.toFixed(2)}</p>
       </div>
       <div className='product__info-actions'>
         <label htmlFor='qty' className='sr-only'>
           Quantity
         </label>
         <NumericInputWithButtons
-          itemId='fall-limited-edition-sneakers'
+          itemId={productId}
           onQuantityChange={setQuantity}
         />
         <Button
@@ -37,9 +46,9 @@ const DescriptionContainer = () => {
           className='btn btn-primary'
           onClick={() =>
             addItem({
-              id: 'fall-limited-edition-sneakers',
-              name: 'Fall Limited Edition Sneakers',
-              price: 125.0,
+              id: productId,
+              name: productName,
+              price: Number(price.toFixed(1)),
               quantity: quantity,
             })
           }>
