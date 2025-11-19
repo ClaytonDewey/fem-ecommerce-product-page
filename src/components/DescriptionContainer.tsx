@@ -5,7 +5,7 @@ import { useCartStore } from '../store/useCartStore';
 
 const DescriptionContainer = () => {
   const [quantity, setQuantity] = useState(1);
-  const { items, addItem } = useCartStore();
+  const { addItem } = useCartStore();
 
   return (
     <section className='product__info'>
