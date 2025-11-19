@@ -9,5 +9,6 @@ export { default as ImageContainer } from './ImageContainer';
 export { default as Input } from './Input';
 export { default as Lightbox } from './Lightbox';
 export { default as Navbar } from './Navbar';
+export { default as NumericInputWithButtons } from './NumericInputWithButtons';
 export { default as ProductContainer } from './ProductContainer';
 export { default as Thumbnail } from './Thumbnail';

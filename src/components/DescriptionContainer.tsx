@@ -1,4 +1,4 @@
-import { Input, Button } from '.';
+import { Button, NumericInputWithButtons } from '.';
 import { Icon } from '../svg';
 
 const DescriptionContainer = () => {
@@ -23,7 +23,7 @@ const DescriptionContainer = () => {
         <label htmlFor='qty' className='sr-only'>
           Quantity
         </label>
-        <Input id='qty' type='number' className='product__info-qty' />
+        <NumericInputWithButtons />
         <Button type='button' className='btn btn-primary'>
           <Icon name='cart' /> Add to cart
         </Button>

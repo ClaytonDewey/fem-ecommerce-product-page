@@ -13,5 +13,15 @@
     border-radius: rem(10);
     width: 100%;
     height: rem(56);
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   }
+}
+
+.input-wrapper {
+  position: relative;
 }

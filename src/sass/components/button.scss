@@ -60,4 +60,23 @@
     width: rem(56);
     border-radius: 50%;
   }
+
+  &-increase,
+  &-decrease {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    svg path {
+      fill: var(--clr-orange-500);
+    }
+  }
+
+  &-decrease {
+    left: rem(16);
+  }
+
+  &-increase {
+    right: rem(16);
+  }
 }
