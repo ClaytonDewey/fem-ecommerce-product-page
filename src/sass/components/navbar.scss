@@ -107,25 +107,27 @@
 .cart {
   color: var(--clr-gray-500);
 
-  svg {
-    fill: var(--clr-gray-500);
-    height: rem(20);
-    width: rem(21.82);
-    transition: var(--transition);
-
-    path {
-      fill: inherit;
-    }
-  }
-
-  &:hover {
+  .btn.btn-open {
     svg {
-      fill: var(--clr-gray-950);
+      fill: var(--clr-gray-500);
       height: rem(20);
       width: rem(21.82);
+      transition: var(--transition);
 
       path {
         fill: inherit;
+      }
+    }
+
+    &:hover {
+      svg {
+        fill: var(--clr-gray-950);
+        height: rem(20);
+        width: rem(21.82);
+
+        path {
+          fill: inherit;
+        }
       }
     }
   }

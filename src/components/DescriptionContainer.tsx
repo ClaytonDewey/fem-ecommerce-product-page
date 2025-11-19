@@ -1,7 +1,12 @@
+import { useState } from 'react';
 import { Button, NumericInputWithButtons } from '.';
 import { Icon } from '../svg';
+import { useCartStore } from '../store/useCartStore';
 
 const DescriptionContainer = () => {
+  const [quantity, setQuantity] = useState(1);
+  const { items, addItem } = useCartStore();
+  console.log(items);
   return (
     <section className='product__info'>
       <div className='product__info-description'>
@@ -23,8 +28,21 @@ const DescriptionContainer = () => {
         <label htmlFor='qty' className='sr-only'>
           Quantity
         </label>
-        <NumericInputWithButtons />
-        <Button type='button' className='btn btn-primary'>
+        <NumericInputWithButtons
+          itemId='fall-limited-edition-sneakers'
+          onQuantityChange={setQuantity}
+        />
+        <Button
+          type='button'
+          className='btn btn-primary'
+          onClick={() =>
+            addItem({
+              id: 'fall-limited-edition-sneakers',
+              name: 'Fall Limited Edition Sneakers',
+              price: 125.0,
+              quantity: quantity,
+            })
+          }>
           <Icon name='cart' /> Add to cart
         </Button>
       </div>

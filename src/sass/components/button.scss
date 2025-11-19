@@ -81,4 +81,12 @@
   &-increase {
     right: rem(16);
   }
+
+  &-delete {
+    svg {
+      width: rem(14);
+      height: rem(16);
+      fill: var(--clr-gray-300);
+    }
+  }
 }

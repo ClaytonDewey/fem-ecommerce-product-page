@@ -18,10 +18,32 @@
   }
 
   &__body {
-    height: rem(99);
+    min-height: rem(99);
     display: flex;
     align-items: flex-end;
     justify-content: center;
     color: var(--clr-gray-500);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-block: rem(24);
+    gap: rem(16);
+    color: var(--clr-gray-500);
+    font: var(--text-preset-3-regular);
+
+    &-image {
+      width: rem(50);
+      height: rem(50);
+      border-radius: rem(4);
+    }
+
+    &-total {
+      font: var(--text-preset-3);
+      color: var(--clr-gray-950);
+    }
   }
 }
