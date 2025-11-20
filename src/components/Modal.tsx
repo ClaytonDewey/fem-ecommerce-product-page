@@ -4,9 +4,10 @@ import { Icon } from '../svg';
 
 type ModalProps = {
   onClose: () => void;
+  imgSrc?: string;
 };
 
-const Modal = ({ onClose }: ModalProps) => {
+const Modal = ({ onClose, imgSrc }: ModalProps) => {
   // https://www.youtube.com/watch?v=jizR55PCbvI
   return (
     <motion.div
@@ -22,26 +23,24 @@ const Modal = ({ onClose }: ModalProps) => {
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.9, opacity: 0 }}
         transition={{ type: 'spring', stiffness: 400, damping: 25 }}>
-        <div className='lightbox__container'>
-          <div className='lightbox__carousel'>
-            <Button
-              type='button'
-              className='btn btn-close-lightbox'
-              onClick={onClose}>
-              <Icon name='close' />
-            </Button>
-            <Button type='button' className='btn btn-prev'>
-              <Icon name='previous' />
-            </Button>
-            <div className='lightbox__viewport'>
-              <div className='lightbox__slide'>
-                <img src='./images/image-product-1.jpg' alt='Product 1' />
-              </div>
+        <div className='modal__content'>
+          <Button
+            type='button'
+            className='btn btn-close-lightbox'
+            onClick={onClose}>
+            <Icon name='close' />
+          </Button>
+          <Button type='button' className='btn btn-prev'>
+            <Icon name='previous' />
+          </Button>
+          <div className='lightbox__viewport'>
+            <div className='lightbox__slide'>
+              <img src={imgSrc} alt='Product 1' />
             </div>
-            <Button type='button' className='btn btn-next'>
-              <Icon name='next' />
-            </Button>
           </div>
+          <Button type='button' className='btn btn-next'>
+            <Icon name='next' />
+          </Button>
         </div>
       </motion.div>
     </motion.div>

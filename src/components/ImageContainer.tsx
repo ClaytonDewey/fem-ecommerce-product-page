@@ -67,7 +67,12 @@ const ImageContainer = () => {
       </div>
       <ThumbnailsContainer />
       <AnimatePresence>
-        {isOpen && <Modal onClose={() => setIsOpen(false)} />}
+        {isOpen && (
+          <Modal
+            onClose={() => setIsOpen(false)}
+            imgSrc={images[selectedIndex].fullsize}
+          />
+        )}
       </AnimatePresence>
     </section>
   );

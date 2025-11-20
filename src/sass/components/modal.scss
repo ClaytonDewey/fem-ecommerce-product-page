@@ -14,6 +14,48 @@
     z-index: 1000;
   }
 
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: rem(594);
+    max-width: rem(550);
+    margin: rem(89) auto auto;
+
+    .btn-close-lightbox {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: rem(22);
+      width: rem(22);
+
+      svg {
+        height: rem(22);
+        width: rem(22);
+      }
+
+      svg path {
+        fill: var(--clr-white);
+      }
+    }
+
+    .btn-prev,
+    .btn-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .btn-prev {
+      left: rem(-28);
+    }
+
+    .btn-next {
+      right: rem(-28);
+    }
+  }
+
   &__body {
     border-radius: rem(16);
     width: 100%;
