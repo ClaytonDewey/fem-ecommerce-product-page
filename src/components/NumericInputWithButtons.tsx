@@ -39,7 +39,8 @@ const NumericInputWithButtons = ({
       <Button
         type='button'
         className='btn btn-decrease'
-        onClick={handleDecrease}>
+        onClick={handleDecrease}
+        aria-label='decrease quantity'>
         <Icon name='minus' />
       </Button>
       <Input
@@ -52,7 +53,8 @@ const NumericInputWithButtons = ({
       <Button
         type='button'
         className='btn btn-increase'
-        onClick={handleIncrease}>
+        onClick={handleIncrease}
+        aria-label='increase quantity'>
         <Icon name='plus' />
       </Button>
     </div>
