@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { Button, Navbar, Sidebar } from '.';
 import { Icon } from '../svg';
@@ -25,7 +26,9 @@ const Header = () => {
         </div>
         <Navbar />
       </header>
-      <Sidebar isOpen={isOpen} onClose={toggleMenu} />
+      <AnimatePresence>
+        {isOpen && <Sidebar isOpen={isOpen} onClose={toggleMenu} />}
+      </AnimatePresence>
     </>
   );
 };
