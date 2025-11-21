@@ -22,8 +22,8 @@ const DescriptionContainer = () => {
   return (
     <section className='product__info'>
       <div className='product__info-description'>
-        <h2>{brand}</h2>
-        <h3>{productName}</h3>
+        <h1>{brand}</h1>
+        <h2>{productName}</h2>
         <p>{description}</p>
       </div>
       <div className='product__info-price'>
@@ -48,7 +48,7 @@ const DescriptionContainer = () => {
             addItem({
               id: productId,
               name: productName,
-              price: Number(price.toFixed(1)),
+              price: Number(price.toFixed(2)),
               quantity: quantity,
             })
           }>

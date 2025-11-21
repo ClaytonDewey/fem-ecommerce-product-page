@@ -18,13 +18,13 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className='navbar-secondary'>
-          <div className='cart'>
+        <ul className='navbar-secondary'>
+          <li className='cart'>
             <Dropdown
               buttonText={
                 <>
                   <Icon name='cart' />
-                  <div className='sr-only'>Shopping Cart</div>
+                  <span className='sr-only'>Shopping Cart</span>
                   {items.length > 0 && (
                     <span className='cart-count'>{getTotalItemCount()}</span>
                   )}
@@ -78,8 +78,8 @@ const Navbar = () => {
                 </>
               }
             />
-          </div>
-          <div>
+          </li>
+          <li>
             <a href='/'>
               <img
                 src='./images/image-avatar.png'
@@ -88,8 +88,8 @@ const Navbar = () => {
               />
               <span className='sr-only'>User Name</span>
             </a>
-          </div>
-        </div>
+          </li>
+        </ul>
       </nav>
     </>
   );

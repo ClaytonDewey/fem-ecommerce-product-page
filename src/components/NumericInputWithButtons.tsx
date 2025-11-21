@@ -22,8 +22,16 @@ const NumericInputWithButtons = ({
   }, [value, itemId, setQuantity, onQuantityChange]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = Number(e.target.value);
-    setValue(newValue);
+    const inputValue = e.target.value;
+    const newValue = Number(inputValue);
+
+    // Validate: only update if newValue is a positive integer
+    if (Number.isInteger(newValue) && newValue > 0) {
+      setValue(newValue);
+    } else if (inputValue === '') {
+      // Optionally allow clearing the input
+      setValue(0);
+    }
   };
 
   const handleIncrease = () => {

@@ -29,6 +29,34 @@
   }
 
   &__image {
+    img {
+      cursor: pointer;
+      display: block;
+      max-width: 100%;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+      transition: var(--transition);
+
+      &.fading {
+        opacity: 0;
+      }
+
+      @include breakpoint(tablet) {
+        top: initial;
+        bottom: rem(-107);
+        transform: translateX(-50%);
+      }
+
+      @include breakpoint(desktop) {
+        position: initial;
+        transform: translate(0);
+      }
+    }
+
     &-main {
       position: relative;
       overflow: hidden;
@@ -49,32 +77,9 @@
         right: rem(16);
       }
 
-      img {
-        cursor: pointer;
-        display: block;
-        max-width: 100%;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 1;
-        transition: opacity 300ms ease-in-out;
-
-        &.fading {
-          opacity: 0;
-        }
-      }
-
       @include breakpoint(tablet) {
         height: rem(290);
         border-radius: rem(15);
-
-        img {
-          top: initial;
-          bottom: rem(-107);
-          transform: translateX(-50%);
-        }
       }
 
       @include breakpoint(desktop) {
@@ -84,11 +89,6 @@
 
         .btn {
           display: none;
-        }
-
-        img {
-          position: initial;
-          transform: translate(0);
         }
       }
     }
@@ -156,14 +156,14 @@
       flex-direction: column;
       gap: rem(16);
 
-      h2 {
+      h1 {
         font: var(--text-preset-6);
         letter-spacing: rem(1.85);
         color: var(--clr-gray-500);
         text-transform: uppercase;
       }
 
-      h3 {
+      h2 {
         text-transform: capitalize;
         font: var(--text-preset-2);
         color: var(--clr-gray-950);
@@ -224,12 +224,12 @@
       &-description {
         gap: rem(24);
 
-        h2 {
+        h1 {
           font: var(--text-preset-5);
           letter-spacing: rem(2);
         }
 
-        h3 {
+        h2 {
           font: var(--text-preset-1);
         }
 

@@ -1,28 +1,28 @@
 const data = [
   {
     id: 1,
-    text: 'collections',
+    text: 'Collections',
     url: '/',
   },
   {
     id: 2,
-    text: 'mens',
-    url: '/mens/',
+    text: 'Mens',
+    url: '/Mens/',
   },
   {
     id: 3,
-    text: 'womens',
-    url: '/womens/',
+    text: 'Womens',
+    url: '/Womens/',
   },
   {
     id: 5,
-    text: 'about',
-    url: '/about/',
+    text: 'About',
+    url: '/About/',
   },
   {
     id: 6,
-    text: 'contact',
-    url: '/contact/',
+    text: 'Contact',
+    url: '/Contact/',
   },
 ];
 

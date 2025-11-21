@@ -1,4 +1,4 @@
-import { forwardRef, ReactNode, CSSProperties } from 'react';
+import { forwardRef, ReactNode } from 'react';
 
 interface DropdownContentProps {
   children: ReactNode;
@@ -10,13 +10,12 @@ const DropdownContent = forwardRef<HTMLDivElement, DropdownContentProps>(
   (props, ref) => {
     const { children, open, top } = props;
 
-    const style: CSSProperties = top !== null ? { top: `${top}px` } : {};
+    const className = `dropdown__content ${open ? 'content-open' : ''} ${
+      top !== null ? 'dropdown__content--positioned' : ''
+    }`;
 
     return (
-      <div
-        className={`dropdown__content ${open ? 'content-open' : ''}`}
-        style={style}
-        ref={ref}>
+      <div className={className} ref={ref}>
         {children}
       </div>
     );

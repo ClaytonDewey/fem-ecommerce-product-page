@@ -38,3 +38,12 @@ body {
   position: absolute;
   white-space: nowrap;
 }
+
+a:focus,
+button:focus,
+input:focus {
+  text-decoration: underline;
+  outline: var(--focus-ring);
+  border-radius: rem(4);
+  box-shadow: 0 0 rem(10) rgba(255, 171, 106, 0.6);
+}

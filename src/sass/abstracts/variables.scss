@@ -28,7 +28,9 @@
   --text-preset-6: normal normal 700 #{rem(12)} / #{rem(15)} var(--ff-primary);
 
   // Transitions
-  --transition: 0.3s ease-in-out;
+  @media (prefers-reduced-motion: no-preference) {
+    --transition: 0.3s ease-in-out;
+  }
 
   @media (prefers-reduced-motion: reduce) {
     --transition: none;
@@ -37,4 +39,5 @@
   // Misc
   --page-width: #{rem(1110)};
   --overlay-bg: rgba(0, 0, 0, 0.75);
+  --focus-ring: #{rem(1)} solid rgba(255, 171, 106, 0.6);
 }

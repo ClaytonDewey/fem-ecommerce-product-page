@@ -29,15 +29,6 @@
     list-style: none;
     display: flex;
     align-items: center;
-    gap: rem(24);
-
-    @include breakpoint(tablet) {
-      gap: rem(48);
-    }
-
-    @include breakpoint(desktop) {
-      gap: rem(32);
-    }
 
     color: var(--clr-gray-500);
     font: var(--text-preset-4);
@@ -45,6 +36,14 @@
 
     &:hover {
       color: var(--clr-gray-950);
+    }
+  }
+
+  &-secondary {
+    gap: rem(24);
+
+    @include breakpoint(tablet) {
+      gap: rem(48);
     }
   }
 
@@ -101,6 +100,7 @@
 
     @include breakpoint(desktop) {
       display: flex;
+      gap: rem(32);
     }
   }
 }
@@ -109,6 +109,10 @@
   color: var(--clr-gray-500);
 
   .btn.btn-open {
+    height: rem(20);
+    width: rem(21.82);
+    position: relative;
+
     svg {
       fill: var(--clr-gray-500);
       height: rem(20);
@@ -123,8 +127,6 @@
     &:hover {
       svg {
         fill: var(--clr-gray-950);
-        height: rem(20);
-        width: rem(21.82);
 
         path {
           fill: inherit;
@@ -134,10 +136,6 @@
   }
 
   .btn.btn-open {
-    height: rem(20);
-    width: rem(21.82);
-    position: relative;
-
     .cart-count {
       position: absolute;
       top: rem(-8);

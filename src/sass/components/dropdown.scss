@@ -25,6 +25,10 @@
     }
     pointer-events: none;
 
+    &--positioned {
+      top: var(--dropdown-top, rem(44));
+    }
+
     &.content-open {
       opacity: 1;
       transform: translateY(0);
