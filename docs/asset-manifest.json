@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/fem-ecommerce-product-page/static/css/main.5de30ef3.css",
-    "main.js": "/fem-ecommerce-product-page/static/js/main.c8dd3683.js",
+    "main.css": "/fem-ecommerce-product-page/static/css/main.dca7ffaf.css",
+    "main.js": "/fem-ecommerce-product-page/static/js/main.05ddedf2.js",
     "static/js/453.6485fb18.chunk.js": "/fem-ecommerce-product-page/static/js/453.6485fb18.chunk.js",
     "index.html": "/fem-ecommerce-product-page/index.html",
-    "main.5de30ef3.css.map": "/fem-ecommerce-product-page/static/css/main.5de30ef3.css.map",
-    "main.c8dd3683.js.map": "/fem-ecommerce-product-page/static/js/main.c8dd3683.js.map",
+    "main.dca7ffaf.css.map": "/fem-ecommerce-product-page/static/css/main.dca7ffaf.css.map",
+    "main.05ddedf2.js.map": "/fem-ecommerce-product-page/static/js/main.05ddedf2.js.map",
     "453.6485fb18.chunk.js.map": "/fem-ecommerce-product-page/static/js/453.6485fb18.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5de30ef3.css",
-    "static/js/main.c8dd3683.js"
+    "static/css/main.dca7ffaf.css",
+    "static/js/main.05ddedf2.js"
   ]
 }
