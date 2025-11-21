@@ -94,6 +94,19 @@
     }
   }
 
+  &__slide {
+    height: rem(550);
+    width: rem(550);
+    overflow: hidden;
+    border-radius: rem(15);
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
   @include breakpoint(medium) {
     &__body {
       padding: rem(48) rem(48);

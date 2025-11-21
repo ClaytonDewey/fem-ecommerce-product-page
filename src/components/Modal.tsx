@@ -47,7 +47,7 @@ const Modal = ({
               onClick={handlePrevious}>
               <Icon name='previous' />
             </Button>
-            <div className='lightbox__slide'>
+            <div className='modal__slide'>
               <img src={imgSrc} alt='Product 1' />
             </div>
             <Button type='button' className='btn btn-next' onClick={handleNext}>
