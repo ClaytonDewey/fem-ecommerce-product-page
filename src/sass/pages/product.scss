@@ -29,34 +29,6 @@
   }
 
   &__image {
-    img {
-      cursor: pointer;
-      display: block;
-      max-width: 100%;
-      height: auto;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 1;
-      transition: var(--transition);
-
-      &.fading {
-        opacity: 0;
-      }
-
-      @include breakpoint(tablet) {
-        top: initial;
-        bottom: rem(-107);
-        transform: translateX(-50%);
-      }
-
-      @include breakpoint(desktop) {
-        position: initial;
-        transform: translate(0);
-      }
-    }
-
     &-main {
       position: relative;
       overflow: hidden;
@@ -77,9 +49,32 @@
         right: rem(16);
       }
 
+      img {
+        cursor: pointer;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        transition: var(--transition);
+
+        &.fading {
+          opacity: 0;
+        }
+      }
+
       @include breakpoint(tablet) {
         height: rem(290);
         border-radius: rem(15);
+
+        img {
+          top: initial;
+          bottom: rem(-107);
+          transform: translateX(-50%);
+        }
       }
 
       @include breakpoint(desktop) {
@@ -89,6 +84,11 @@
 
         .btn {
           display: none;
+        }
+
+        img {
+          position: initial;
+          transform: translate(0);
         }
       }
     }
