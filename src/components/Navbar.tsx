@@ -24,6 +24,7 @@ const Navbar = () => {
               buttonText={
                 <>
                   <Icon name='cart' />
+                  <div className='sr-only'>Shopping Cart</div>
                   {items.length > 0 && (
                     <span className='cart-count'>{getTotalItemCount()}</span>
                   )}
