@@ -86,7 +86,7 @@ const Navbar = () => {
                 alt='User Avatar'
                 className='avatar'
               />
-              <div className='sr-only'>User Name</div>
+              <span className='sr-only'>User Name</span>
             </a>
           </div>
         </div>
