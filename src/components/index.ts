@@ -11,4 +11,5 @@ export { default as Modal } from './Modal';
 export { default as Navbar } from './Navbar';
 export { default as NumericInputWithButtons } from './NumericInputWithButtons';
 export { default as ProductContainer } from './ProductContainer';
+export { default as Sidebar } from './Sidebar';
 export { default as Thumbnail } from './Thumbnail';

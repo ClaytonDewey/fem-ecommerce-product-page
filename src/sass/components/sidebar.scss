@@ -1,0 +1,79 @@
+@use '../util' as *;
+
+.sidebar {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  left: -100%;
+
+  &__body {
+    left: rem(-250);
+    height: 0;
+  }
+
+  @include breakpoint(tablet) {
+    &__body {
+      left: rem(-301);
+    }
+  }
+
+  &.open {
+    position: fixed;
+    z-index: 300;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-bg);
+
+    .sidebar__body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: rem(56);
+      position: absolute;
+      z-index: 400;
+      background-color: var(--clr-white);
+      top: 0;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      width: rem(250);
+      padding: rem(24);
+
+      .btn {
+        height: rem(13.44);
+        width: rem(13.44);
+      }
+
+      @include breakpoint(tablet) {
+        width: rem(301);
+        padding: rem(48) rem(80);
+      }
+    }
+
+    .sidebar__primary {
+      display: flex;
+      flex-direction: column;
+      gap: rem(24);
+      align-items: flex-start;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      a {
+        color: var(--clr-gray-950);
+        text-transform: capitalize;
+        text-decoration: none;
+        font-size: rem(18);
+        line-height: rem(26);
+        font-weight: 700;
+      }
+    }
+  }
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
