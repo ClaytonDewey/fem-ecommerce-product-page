@@ -1,13 +1,23 @@
 import { motion } from 'framer-motion';
 import { Button } from '.';
 import { Icon } from '../svg';
+import React from 'react';
 
 type ModalProps = {
   onClose: () => void;
+  handleNext?: () => void;
+  handlePrevious?: () => void;
   imgSrc?: string;
+  thumbnailContainer?: React.ReactNode;
 };
 
-const Modal = ({ onClose, imgSrc }: ModalProps) => {
+const Modal = ({
+  onClose,
+  imgSrc,
+  thumbnailContainer,
+  handleNext,
+  handlePrevious,
+}: ModalProps) => {
   // https://www.youtube.com/watch?v=jizR55PCbvI
   return (
     <motion.div
@@ -30,17 +40,21 @@ const Modal = ({ onClose, imgSrc }: ModalProps) => {
             onClick={onClose}>
             <Icon name='close' />
           </Button>
-          <Button type='button' className='btn btn-prev'>
-            <Icon name='previous' />
-          </Button>
-          <div className='lightbox__viewport'>
+          <div className='modal__viewport'>
+            <Button
+              type='button'
+              className='btn btn-prev'
+              onClick={handlePrevious}>
+              <Icon name='previous' />
+            </Button>
             <div className='lightbox__slide'>
               <img src={imgSrc} alt='Product 1' />
             </div>
+            <Button type='button' className='btn btn-next' onClick={handleNext}>
+              <Icon name='next' />
+            </Button>
           </div>
-          <Button type='button' className='btn btn-next'>
-            <Icon name='next' />
-          </Button>
+          {thumbnailContainer}
         </div>
       </motion.div>
     </motion.div>

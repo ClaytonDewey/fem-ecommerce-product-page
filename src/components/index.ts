@@ -7,7 +7,6 @@ export { default as Footer } from './Footer';
 export { default as Header } from './Header';
 export { default as ImageContainer } from './ImageContainer';
 export { default as Input } from './Input';
-export { default as Lightbox } from './Lightbox';
 export { default as Modal } from './Modal';
 export { default as Navbar } from './Navbar';
 export { default as NumericInputWithButtons } from './NumericInputWithButtons';

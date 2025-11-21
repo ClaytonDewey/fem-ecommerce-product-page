@@ -71,6 +71,9 @@ const ImageContainer = () => {
           <Modal
             onClose={() => setIsOpen(false)}
             imgSrc={images[selectedIndex].fullsize}
+            thumbnailContainer={<ThumbnailsContainer />}
+            handleNext={handleNext}
+            handlePrevious={handlePrevious}
           />
         )}
       </AnimatePresence>
