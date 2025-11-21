@@ -1,6 +1,7 @@
 {
   "name": "fem-ecommerce-product-page",
   "version": "0.1.0",
+  "homepage": "https://claytondewey.github.io/fem-ecommerce-product-page/",
   "private": true,
   "dependencies": {
     "@fancyapps/ui": "^6.1.5",
